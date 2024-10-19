@@ -1,0 +1,3 @@
+com\test\aws\automate\runner\TestRunner.class
+com\test\aws\automate\stepdefinitions\GoogleSearchStepsDef.class
+com\test\aws\automate\stepdefinitions\LoginSteps.class
