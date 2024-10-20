@@ -1,4 +1,4 @@
-package com.test.aws.automate.stepdefinitions;
+package com.test.aws.automate.pages;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

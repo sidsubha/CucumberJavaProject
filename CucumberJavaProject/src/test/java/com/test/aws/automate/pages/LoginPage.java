@@ -1,32 +1,51 @@
 package com.test.aws.automate.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import static com.test.aws.automate.stepdefinitions.Hooks.driver;
 
 public class LoginPage {
 
-    WebDriver driver;
+    public LoginPage() {
+        PageFactory.initElements(driver, this);
+    }
 
-    By txt_username = By.id("txtUserID");
-    By txt_password = By.id("txtPWD");
-    By txt_btn_SignIn = By.id("Sign me in");
+    @FindBy(id ="txtUserID")
+    private WebElement txtUserID;
+
+    @FindBy(id = "txtPWD")
+    private WebElement txtPWD;
+
+    @FindBy(id = "Sign me in")
+    private WebElement signMeIn;
+
+    @FindBy(id = "lblPersonName")
+    private WebElement lblPersonName;
 
     public void enterUsername(String username) {
-        driver.findElement(txt_username).sendKeys(username);
+        txtUserID.sendKeys(username);
     }
 
     public void enterPassword(String password) {
-        driver.findElement(txt_password).sendKeys(password);
+        txtPWD.sendKeys(password);
     }
 
     public void clickSign() {
-        driver.findElement(txt_btn_SignIn).click();
+        signMeIn.click();
+    }
+
+    public void checkSignOutIsDisplayed(){
+        Assert.assertTrue( lblPersonName.isDisplayed());
     }
 
     public void loginValidUser(String username, String password) {
-        driver.findElement(txt_username).sendKeys(username);
-        driver.findElement(txt_password).sendKeys(password);
-        driver.findElement(txt_btn_SignIn).click();
+        txtUserID.sendKeys(username);
+        txtPWD.sendKeys(password);
+        signMeIn.click();
     }
 
 
