@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.test.aws.automate.runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.665 s <<< FAILURE! -- in com.test.aws.automate.runner.TestRunner
-feature to test google search functionality.Validate google search is working -- Time elapsed: 2.032 s <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.080 s <<< FAILURE! -- in com.test.aws.automate.runner.TestRunner
+feature to test google search functionality.Validate google search is working -- Time elapsed: 2.033 s <<< ERROR!
 io.cucumber.junit.UndefinedStepException: 
 The step 'user is on google search page' and 3 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
